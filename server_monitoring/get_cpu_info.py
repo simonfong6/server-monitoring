@@ -1,3 +1,4 @@
+import json
 import os
 import subprocess
 import re
@@ -20,3 +21,5 @@ statistics['physical_and_logical_cpu_count'] = physical_and_logical_cpu_count
 
 cpu_load = [x / os.cpu_count() * 100 for x in os.getloadavg()][-1]
 statistics['cpu_load'] = cpu_load
+
+print(json.dumps(statistics, indent=4, sort_keys=True))

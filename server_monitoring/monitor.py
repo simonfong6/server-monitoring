@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 
+import json
 import os
 import subprocess
 import re
@@ -94,3 +95,5 @@ def get_statistics():
 statistics = get_statistics()
 
 # Here we can send the statistics to a server or even locally store the statistics in a database.
+
+print(json.dumps(statistics, indent=4, sort_keys=True))
